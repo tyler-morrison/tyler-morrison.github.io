@@ -1,0 +1,285 @@
+/* CSS DIRECTORY
+	1. =RESET
+	2. =UTILITY
+	3. =PRIMARY
+*/
+
+/* === RESET === */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+/* === VARIABLES === */
+:root {
+    --color-bkg: hsl(50, 3%, 93%);
+    --color-text-primary: hsl(214, 12%, 45%);
+    --color-decorative-01: hsl(38, 49%, 62%);
+    --color-decorative-02: hsl(300, 11%, 15%);
+
+    --font-size-base: 14px;
+}
+
+/* === UTILITY === */
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0); /* Legacy property for Internet Explorer */
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+/* === PRIMARY === */
+body {
+    background: var(--color-bkg);
+}
+
+.resume {
+    max-width: 47rem;
+    padding: 2rem;
+    margin: 0 auto;
+
+    font-family: "Inconsolata", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: var(--font-size-base);
+    color: var(--color-text-primary);
+}
+
+.resume a {
+    text-decoration: none;
+    color: var(--color-text-primary);
+}
+
+.resume p {
+    text-wrap: pretty;
+    margin-bottom: 0.5rem;
+}
+
+.resume-title {
+    margin-bottom: 0.25rem;
+
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+
+    text-transform: uppercase;
+
+    font-size: 3.5rem;
+    line-height: 0.8;
+    letter-spacing: 0.5rem;
+}
+
+.resume-title b {
+    font-weight: 700;
+}
+
+.resume-subtitle {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+    text-transform: uppercase;
+
+    font-size: 1rem;
+    line-height: 2;
+
+    letter-spacing: 0.125rem;
+
+    @media screen and (min-width: 410px) {
+        letter-spacing: 0.25rem;
+    }
+}
+
+.resume-divider {
+    width: 35%;
+    margin: 1rem 0;
+    border-style: solid;
+    border-width: 2px;
+
+    @media screen and (min-width: 500px) {
+        width: 20%;
+    }
+}
+
+.resume-contactInfo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-text-primary);
+    margin-bottom: 1rem;
+
+    font-size: 0.85rem;
+    font-style: normal;
+
+    color: var(--color-text-primary);
+
+    @media screen and (min-width: 450px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+.resume-section {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-text-primary);
+    margin-bottom: 1rem;
+}
+
+.resume-section:last-child {
+    border-bottom: none;
+}
+
+.resume-section-heading {
+    margin-bottom: 0.75rem;
+
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+}
+
+.resume-skillsList {
+    width: 100%;
+    padding: 0 0 0 1rem;
+
+    @media screen and (min-width: 650px) {
+        display: grid;
+        grid-template-columns: 2fr 1.5fr 1fr;
+        column-gap: 1rem;
+    }
+}
+
+.position {
+    margin-bottom: 1.25rem;
+}
+
+.position:last-child {
+    margin-bottom: 0;
+}
+
+.position-details {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.625rem;
+
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+
+    line-height: 1.25;
+    letter-spacing: 0.125rem;
+}
+
+.position-title {
+    width: 100%;
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.position-company:after, .position-location:after {
+    padding: 0 0.5rem;
+    content: "|";
+}
+
+.position-startDate:after {
+    padding: 0 0.375rem 0 0.125rem;
+    content: "-";
+}
+
+.position-highlights {
+    padding-left: 1rem;
+    font-size: 0.75rem;
+}
+
+.position-highlights li {
+    margin-bottom: 0.25rem;
+}
+
+.misc {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.375rem;
+
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+
+    @media screen and (min-width: 450px) {
+        margin-bottom: 0.125rem;
+    }
+}
+
+.misc-achievement {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.misc-achievement:after {
+    content: "-";
+    padding: 0 0.5rem;
+    font-weight: 400;
+}
+
+.misc-organization:after {
+    padding: 0 0.5rem;
+    content: "|";
+}
