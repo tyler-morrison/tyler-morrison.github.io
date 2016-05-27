@@ -1,0 +1,14 @@
+{
+  "name": "tyler-morrison.github.io",
+  "version": "1.0.0",
+  "description": "Just another GitHub user page",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyler-morrison/tyler-morrison.github.io.git"
+  },
+  "author": "Tyler Morrison <tmorrison@fastmail.com>",
+  "license": "GLWTPL",
+  "homepage": "https://tyler-morrison.github.io/",
+  "dependencies": {}
+}
