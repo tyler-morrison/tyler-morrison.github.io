@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/tyler-morrison/tyler-morrison.github.io/issues"
   },
-  "homepage": "https://github.com/tyler-morrison/tyler-morrison.github.io#readme"
+  "homepage": "https://github.com/tyler-morrison/tyler-morrison.github.io#readme",
+  "dependencies": {
+    "@types/gsap": "1.19.1",
+    "gsap": "1.20.3"
+  }
 }
